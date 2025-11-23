@@ -1,0 +1,36 @@
+﻿<UserControl
+    x:Class="AshellWPF.Views.MainNavigateView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:AshellWPF.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="60"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <!--<WrapPanel Background="Transparent">
+
+    </WrapPanel>-->
+    <ItemsControl Background="Transparent" ItemsSource="{Binding Controls}">
+        <ItemsControl.ItemsPanel>
+            <ItemsPanelTemplate>
+                <WrapPanel />
+            </ItemsPanelTemplate>
+        </ItemsControl.ItemsPanel>
+        <ItemsControl.ItemTemplate>
+            <DataTemplate>
+                <Button
+                    x:Name="BasicControl"
+                    Width="100"
+                    Height="40"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Background="Firebrick"
+                    Command="{Binding DataContext.BasicControlCmd, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}"
+                    CommandParameter="{Binding}"
+                    Content="{Binding}"
+                    Foreground="Bisque" />
+            </DataTemplate>
+        </ItemsControl.ItemTemplate>
+    </ItemsControl>
+</UserControl>

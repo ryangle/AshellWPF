@@ -1,0 +1,62 @@
+﻿using ControlSamples;
+using ControlSamples.Views;
+using AshellWPF.Core;
+using AshellWPF.ViewModels;
+using AshellWPF.Views;
+using System.Configuration;
+using System.Data;
+using System.Windows;
+
+namespace AshellWPF
+{
+    /// <summary>
+    /// Interaction logic for App.xaml
+    /// </summary>
+    public partial class App : PrismApplication
+    {
+        protected override Window CreateShell()
+        {
+            return Container.Resolve<LoginView>();
+        }
+        protected override void OnInitialized()
+        {
+            base.OnInitialized();
+
+            var regionManager = Container.Resolve<IRegionManager>();
+            regionManager.RegisterViewWithRegion(RegionsConstants.MainNavigateRegion, typeof(MainNavigateView));
+            //regionManager.RegisterViewWithRegion(RegionsConstants.MainContentRegion, typeof(MainContentView));
+            regionManager.RequestNavigate(RegionsConstants.MainContentRegion, nameof(MainContentView));
+            Container.Resolve<IEventAggregator>().GetEvent<AppInitializedEvent>().Publish();
+        }
+        protected override void RegisterTypes(IContainerRegistry containerRegistry)
+        {
+            //containerRegistry
+            //    .RegisterSingleton<MainView>()
+            //    .RegisterSingleton<LoginView>();
+
+            //containerRegistry.Register<MainView>();
+            //containerRegistry.Register<MainViewModel>();
+
+            //containerRegistry.RegisterForNavigation<MainNavigateView>("MainNavigateRegion");
+            //containerRegistry.RegisterForNavigation<FollowMouseView>("FollowMouseView");
+            containerRegistry.RegisterForNavigation<MainContentView>(nameof(MainContentView));
+
+        }
+        protected override void ConfigureViewModelLocator()
+        {
+            base.ConfigureViewModelLocator();
+            // ViewModelLocationProvider.Register<MainNavigateView, MainNavigateViewModel>();
+        }
+        protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
+        {
+            base.ConfigureModuleCatalog(moduleCatalog);
+            moduleCatalog.AddModule<ControlSamplesModule>();
+        }
+        ////运行时加载Module的方式
+        //protected override IModuleCatalog CreateModuleCatalog()
+        //{
+        //    return new DirectoryModuleCatalog { ModulePath = @".\Modules" };
+        //}
+    }
+
+}
