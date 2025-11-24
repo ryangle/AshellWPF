@@ -10,6 +10,5 @@
     mc:Ignorable="d">
     <Grid>
         <TextBlock Text="启动窗口内容" />
-        <Button Command="{Binding LoginCmd}" Content="登录" />
     </Grid>
 </UserControl>

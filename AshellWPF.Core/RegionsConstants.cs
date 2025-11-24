@@ -8,6 +8,6 @@ namespace AshellWPF.Core
     {
         public const string MainContentRegion = "MainContentRegion";
         public const string MainNavigateRegion = "MainNavigateRegion";
-        public const string BottomRegion = "BottomRegion";
+        public const string SubNavigateRegion = "SubNavigateRegion";
     }
 }

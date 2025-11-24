@@ -16,7 +16,7 @@ namespace AshellWPF
     {
         protected override Window CreateShell()
         {
-            return Container.Resolve<LoginView>();
+            return Container.Resolve<MainView>();
         }
         protected override void OnInitialized()
         {
@@ -24,7 +24,7 @@ namespace AshellWPF
 
             var regionManager = Container.Resolve<IRegionManager>();
             regionManager.RegisterViewWithRegion(RegionsConstants.MainNavigateRegion, typeof(MainNavigateView));
-            //regionManager.RegisterViewWithRegion(RegionsConstants.MainContentRegion, typeof(MainContentView));
+            regionManager.RegisterViewWithRegion(RegionsConstants.SubNavigateRegion, typeof(MainContentView));
             regionManager.RequestNavigate(RegionsConstants.MainContentRegion, nameof(MainContentView));
             Container.Resolve<IEventAggregator>().GetEvent<AppInitializedEvent>().Publish();
         }

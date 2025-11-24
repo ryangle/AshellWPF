@@ -9,13 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Assets\WPFGalleryPreviewIcon.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Assets\WPFGalleryPreviewIcon.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <None Remove="Assets\UserDashboard\103-100x100.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,7 +22,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AshellWPF.Core\AshellWPF.Core.csproj" />
-    <ProjectReference Include="..\AshellWPFModules\ControlsModule\ControlSamples.csproj" />
+    <ProjectReference Include="..\Modules\ControlsModule\ControlSamples.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\UserDashboard\103-100x100.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

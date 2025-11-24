@@ -23,10 +23,5 @@ namespace AshellWPF.Views
         {
             InitializeComponent();
         }
-
-        private void button_click(object sender, RoutedEventArgs e)
-        {
-            Debug.WriteLine(nameof(button_click));
-        }
     }
 }

@@ -38,7 +38,6 @@ namespace AshellWPF.Views
                 NonClientFrameEdges = SystemParameters.HighContrast ? NonClientFrameEdges.None :
                     NonClientFrameEdges.Right | NonClientFrameEdges.Bottom | NonClientFrameEdges.Left
             });
-            Debug.WriteLine("MainView Creator");
         }
     }
 }

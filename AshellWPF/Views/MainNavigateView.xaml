@@ -5,32 +5,69 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:AshellWPF.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    d:DesignHeight="60"
-    d:DesignWidth="800"
+    d:DesignHeight="720"
+    d:DesignWidth="64"
     mc:Ignorable="d">
-    <!--<WrapPanel Background="Transparent">
-
-    </WrapPanel>-->
-    <ItemsControl Background="Transparent" ItemsSource="{Binding Controls}">
-        <ItemsControl.ItemsPanel>
-            <ItemsPanelTemplate>
-                <WrapPanel />
-            </ItemsPanelTemplate>
-        </ItemsControl.ItemsPanel>
-        <ItemsControl.ItemTemplate>
-            <DataTemplate>
-                <Button
-                    x:Name="BasicControl"
-                    Width="100"
-                    Height="40"
-                    HorizontalContentAlignment="Center"
-                    VerticalContentAlignment="Center"
-                    Background="Firebrick"
-                    Command="{Binding DataContext.BasicControlCmd, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}"
-                    CommandParameter="{Binding}"
-                    Content="{Binding}"
-                    Foreground="Bisque" />
-            </DataTemplate>
-        </ItemsControl.ItemTemplate>
-    </ItemsControl>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="220" />
+        </Grid.RowDefinitions>
+        <Border
+            Grid.Row="0"
+            Width="40"
+            Height="40"
+            CornerRadius="4">
+            <Border.Background>
+                <ImageBrush ImageSource="/Assets/UserDashboard/103-100x100.jpg" />
+            </Border.Background>
+        </Border>
+        <ItemsControl
+            Grid.Row="1"
+            Background="Transparent"
+            ItemsSource="{Binding Controls}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Top" />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Button
+                        x:Name="BasicControl"
+                        Width="50"
+                        Height="40"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        Background="Firebrick"
+                        Command="{Binding DataContext.BasicControlCmd, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}"
+                        CommandParameter="{Binding}"
+                        Content="{Binding}"
+                        Foreground="Bisque" />
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+        <WrapPanel
+            Grid.Row="2"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom">
+            <Button
+                Width="40"
+                Height="40"
+                Background="Transparent"
+                BorderThickness="0"
+                Command="{Binding SettingCmd}"
+                Content="设"
+                Foreground="Beige" />
+            <Button
+                Width="40"
+                Height="40"
+                Background="Transparent"
+                BorderThickness="0"
+                Command="{Binding HelpCmd}"
+                Content="帮"
+                Foreground="Beige" />
+        </WrapPanel>
+    </Grid>
 </UserControl>
