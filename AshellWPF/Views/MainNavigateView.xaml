@@ -8,6 +8,7 @@
     d:DesignHeight="720"
     d:DesignWidth="64"
     mc:Ignorable="d">
+    <UserControl.Resources />
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="90" />
@@ -36,38 +37,56 @@
                 <DataTemplate>
                     <Button
                         x:Name="BasicControl"
-                        Width="50"
+                        Width="40"
                         Height="40"
+                        Margin="0,5,0,10"
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
-                        Background="Firebrick"
+                        Background="Transparent"
+                        BorderThickness="0"
                         Command="{Binding DataContext.BasicControlCmd, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}"
-                        CommandParameter="{Binding}"
-                        Content="{Binding}"
-                        Foreground="Bisque" />
+                        CommandParameter="{Binding Name}"
+                        Foreground="Bisque">
+                        <Viewbox>
+                            <Path
+                                Data="{Binding IconData}"
+                                Fill="White"
+                                Stretch="Fill" />
+                        </Viewbox>
+                    </Button>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
         <WrapPanel
             Grid.Row="2"
-            HorizontalAlignment="Left"
+            HorizontalAlignment="Center"
             VerticalAlignment="Bottom">
             <Button
                 Width="40"
                 Height="40"
+                HorizontalContentAlignment="Center"
                 Background="Transparent"
                 BorderThickness="0"
                 Command="{Binding SettingCmd}"
-                Content="设"
-                Foreground="Beige" />
+                Foreground="Beige">
+                <Viewbox>
+                    <Path
+                        Data="M736.653061 929.959184H287.346939c-45.97551 0-83.591837-37.616327-83.591837-83.591837V177.632653c0-45.97551 37.616327-83.591837 83.591837-83.591837h449.306122c45.97551 0 83.591837 37.616327 83.591837 83.591837v668.734694c0 45.97551-37.616327 83.591837-83.591837 83.591837zM287.346939 135.836735c-22.987755 0-41.795918 18.808163-41.795919 41.795918v668.734694c0 22.987755 18.808163 41.795918 41.795919 41.795918h449.306122c22.987755 0 41.795918-18.808163 41.795919-41.795918V177.632653c0-22.987755-18.808163-41.795918-41.795919-41.795918H287.346939z M616.489796 815.020408H407.510204c-11.493878 0-20.897959-9.404082-20.897959-20.897959s9.404082-20.897959 20.897959-20.897959h208.979592c11.493878 0 20.897959 9.404082 20.897959 20.897959s-9.404082 20.897959-20.897959 20.897959z"
+                        Fill="White"
+                        Stretch="Fill" />
+                </Viewbox>
+            </Button>
             <Button
                 Width="40"
                 Height="40"
                 Background="Transparent"
                 BorderThickness="0"
                 Command="{Binding HelpCmd}"
-                Content="帮"
-                Foreground="Beige" />
+                Foreground="Beige">
+                <Viewbox>
+                    <Path Data="M66.488889 211.781818h891.022222c28.198788 0 50.980202-22.238384 50.980202-49.648485 0-27.397172-22.768485-49.648485-50.980202-49.648485H66.488889C38.341818 112.484848 15.508687 134.723232 15.508687 162.133333s22.833131 49.648485 50.980202 49.648485z m891.009293 248.242424H66.488889C38.277172 460.024242 15.508687 482.262626 15.508687 509.672727s22.768485 49.648485 50.980202 49.648485h891.022222c28.198788 0 50.980202-22.238384 50.980202-49.648485-0.012929-27.410101-22.923636-49.648485-50.993131-49.648485z m0 351.63798H66.488889c-28.134141 0-50.980202 22.238384-50.980202 49.648485s22.833131 49.648485 50.980202 49.648485h891.022222c28.198788 0 50.980202-22.238384 50.980202-49.648485-0.012929-27.397172-22.781414-49.648485-50.993131-49.648485z m0 0" Fill="White" />
+                </Viewbox>
+            </Button>
         </WrapPanel>
     </Grid>
 </UserControl>
