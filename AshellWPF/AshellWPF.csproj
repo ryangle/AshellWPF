@@ -9,10 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Assets\UserDashboard\103-100x100.jpg" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Prism.DryIoc" Version="9.0.537" />
   </ItemGroup>
 
@@ -26,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Assets\UserDashboard\103-100x100.jpg">
+    <Resource Include="Assets\UserDashboard\11310865.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

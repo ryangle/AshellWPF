@@ -8,5 +8,10 @@
     d:DesignHeight="450"
     d:DesignWidth="800"
     mc:Ignorable="d">
-    <Grid />
+    <Viewbox Width="50">
+        <Path
+            Data="{StaticResource testSvg}"
+            Fill="White"
+            Stretch="Uniform" />
+    </Viewbox>
 </UserControl>
