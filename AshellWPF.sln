@@ -16,6 +16,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfControls", "Modules\WpfControls\WpfControls.csproj", "{7C216BB0-C028-7DA5-5F0C-F61AA0FADFCF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,12 +36,17 @@ Global
 		{9A10A174-C087-787A-3A54-A9A3DDC98E93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A10A174-C087-787A-3A54-A9A3DDC98E93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A10A174-C087-787A-3A54-A9A3DDC98E93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C216BB0-C028-7DA5-5F0C-F61AA0FADFCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C216BB0-C028-7DA5-5F0C-F61AA0FADFCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C216BB0-C028-7DA5-5F0C-F61AA0FADFCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C216BB0-C028-7DA5-5F0C-F61AA0FADFCF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{50F2808D-048E-45D1-ACBF-7CAE141DD0EF} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{7C216BB0-C028-7DA5-5F0C-F61AA0FADFCF} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0E70CB51-69B3-4091-9722-71E0BF211F7F}

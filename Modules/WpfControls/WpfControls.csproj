@@ -8,12 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Prism.DryIoc" Version="9.0.537" />
+    <None Remove="Images\cat.jpg" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\AshellWPF.Core\AshellWPF.Core.csproj" />
-    <ProjectReference Include="..\WpfControls\WpfControls.csproj" />
+    <Content Include="Images\cat.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

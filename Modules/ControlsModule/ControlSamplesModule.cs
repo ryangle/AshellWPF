@@ -20,6 +20,7 @@ namespace ControlSamples
             containerRegistry.RegisterForNavigation<AdornerView>(nameof(AdornerView));
             containerRegistry.RegisterForNavigation<FollowMouseView>(nameof(FollowMouseView));
             containerRegistry.RegisterForNavigation<ControlSamplesView>(nameof(ControlSamplesView));
+            containerRegistry.RegisterForNavigation<ThumbSampleView>(nameof(ThumbSampleView));
         }
     }
 }

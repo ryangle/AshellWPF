@@ -24,7 +24,7 @@ namespace AshellWPF
 
             var regionManager = Container.Resolve<IRegionManager>();
             regionManager.RegisterViewWithRegion(RegionsConstants.MainNavigateRegion, typeof(MainNavigateView));
-            regionManager.RegisterViewWithRegion(RegionsConstants.SubNavigateRegion, typeof(MainContentView));
+            regionManager.RegisterViewWithRegion(RegionsConstants.SubNavigateRegion, "ControlSamplesView");
             regionManager.RequestNavigate(RegionsConstants.MainContentRegion, nameof(MainContentView));
             Container.Resolve<IEventAggregator>().GetEvent<AppInitializedEvent>().Publish();
         }

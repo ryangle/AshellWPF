@@ -8,11 +8,7 @@ using System.Text;
 
 namespace AshellWPF.ViewModels
 {
-    public class NavigatateItem
-    {
-        public string Name { get; set; } = string.Empty;
-        public string IconData { get; set; } = string.Empty;
-    }
+
     public class MainNavigateViewModel : BindableBase, INavigationAware
     {
         private readonly IRegionManager regionManager;
@@ -25,13 +21,17 @@ namespace AshellWPF.ViewModels
             this.regionManager = regionManager;
             this.moduleCatalog = moduleCatalog;
             BasicControlCmd = new DelegateCommand<string>(BasicControlView);
-            Controls.Add(new NavigatateItem() { Name = "ControlSamplesView", IconData = "MessageIcon" });
-            Controls.Add(new NavigatateItem() { Name = "FollowMouseView", IconData = "ContactsIcon" });
-            Controls.Add(new NavigatateItem() { Name = "AdornerView", IconData = "FavoriteIcon" });
+            Controls.Add(new NavigatateItem() { ViewName = "ControlSamplesView", IconData = "MessageIcon" });
+            Controls.Add(new NavigatateItem() { ViewName = "", IconData = "ContactsIcon" });
+            Controls.Add(new NavigatateItem() { ViewName = "", IconData = "FavoriteIcon" });
         }
         private void BasicControlView(string view)
         {
-            //Debug.WriteLine("BasicControlView");
+            Debug.WriteLine($"BasicControlView {view}");
+            if (string.IsNullOrEmpty(view))
+            {
+                return;
+            }
             regionManager.RequestNavigate(RegionsConstants.SubNavigateRegion, view);
         }
         private void AppInitialized()
