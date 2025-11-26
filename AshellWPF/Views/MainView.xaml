@@ -40,11 +40,16 @@
                 VerticalAlignment="Stretch"
                 Background="Gray"
                 ShowsPreview="True" />
-            <ContentControl
+            <ScrollViewer
+                Name="scrollViewer1"
                 Grid.Column="3"
-                Margin="0,40,0,0"
-                prism:RegionManager.RegionName="{x:Static core:RegionsConstants.MainContentRegion}"
-                Foreground="AliceBlue" />
+                HorizontalScrollBarVisibility="Auto"
+                VerticalScrollBarVisibility="Auto">
+                <ContentControl
+                    Margin="0,40,0,0"
+                    prism:RegionManager.RegionName="{x:Static core:RegionsConstants.MainContentRegion}"
+                    Foreground="AliceBlue" />
+            </ScrollViewer>
 
         </Grid>
     </Border>

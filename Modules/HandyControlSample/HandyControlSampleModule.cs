@@ -18,6 +18,8 @@ namespace ControlSamples
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<HandyControlSampleView>(nameof(HandyControlSampleView));
+            containerRegistry.RegisterForNavigation<ButtonView>(nameof(ButtonView));
+            containerRegistry.RegisterForNavigation<MenuView>(nameof(MenuView));
         }
     }
 }
