@@ -22,7 +22,7 @@ namespace AshellWPF.ViewModels
             this.moduleCatalog = moduleCatalog;
             BasicControlCmd = new DelegateCommand<string>(BasicControlView);
             Controls.Add(new NavigatateItem() { ViewName = "ControlSamplesView", IconData = "MessageIcon" });
-            Controls.Add(new NavigatateItem() { ViewName = "", IconData = "ContactsIcon" });
+            Controls.Add(new NavigatateItem() { ViewName = "ThirdpartyLibraryView", IconData = "ContactsIcon" });
             Controls.Add(new NavigatateItem() { ViewName = "", IconData = "FavoriteIcon" });
         }
         private void BasicControlView(string view)

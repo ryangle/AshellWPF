@@ -19,6 +19,7 @@
   <ItemGroup>
     <ProjectReference Include="..\AshellWPF.Core\AshellWPF.Core.csproj" />
     <ProjectReference Include="..\Modules\ControlsModule\ControlSamples.csproj" />
+    <ProjectReference Include="..\Modules\HandyControlSample\HandyControlSample.csproj" />
   </ItemGroup>
 
   <ItemGroup>

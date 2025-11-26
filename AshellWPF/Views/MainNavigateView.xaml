@@ -64,24 +64,12 @@
             HorizontalAlignment="Center"
             VerticalAlignment="Bottom">
             <Button
-                Width="40"
-                Height="40"
+                x:Name="PhoneButton"
+                Width="44"
                 HorizontalContentAlignment="Center"
                 Background="Transparent"
                 BorderThickness="0"
-                Foreground="Beige">
-                <Viewbox>
-                    <Path
-                        Data="{StaticResource MoreIcon}"
-                        Fill="White"
-                        Stretch="Fill" />
-                </Viewbox>
-            </Button>
-            <Button
-                Width="40"
-                Height="40"
-                Background="Transparent"
-                BorderThickness="0"
+                Click="PhoneButton_Click"
                 Foreground="Beige">
                 <Viewbox>
                     <Path
@@ -89,7 +77,34 @@
                         Fill="White"
                         Stretch="Fill" />
                 </Viewbox>
+                <Button.ContextMenu>
+                    <ContextMenu Placement="Right">
+                        <MenuItem Header="帮助" />
+                        <MenuItem Header="关于" />
+                        <MenuItem Header="联系" />
+                    </ContextMenu>
+                </Button.ContextMenu>
             </Button>
+            <Menu>
+                <MenuItem
+                    Width="44"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Foreground="Beige">
+
+                    <MenuItem.Header>
+                        <Viewbox>
+                            <Path
+                                Data="{StaticResource MoreIcon}"
+                                Fill="White"
+                                Stretch="Fill" />
+                        </Viewbox>
+                    </MenuItem.Header>
+                    <MenuItem.Items>
+                        <MenuItem Header="设置" />
+                    </MenuItem.Items>
+                </MenuItem>
+            </Menu>
         </WrapPanel>
     </Grid>
 </UserControl>

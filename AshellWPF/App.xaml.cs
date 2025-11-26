@@ -1,8 +1,9 @@
-﻿using ControlSamples;
-using ControlSamples.Views;
-using AshellWPF.Core;
+﻿using AshellWPF.Core;
 using AshellWPF.ViewModels;
 using AshellWPF.Views;
+using ControlSamples;
+using ControlSamples.Views;
+using DryIoc;
 using System.Configuration;
 using System.Data;
 using System.Windows;
@@ -40,6 +41,8 @@ namespace AshellWPF
             //containerRegistry.RegisterForNavigation<MainNavigateView>("MainNavigateRegion");
             //containerRegistry.RegisterForNavigation<FollowMouseView>("FollowMouseView");
             containerRegistry.RegisterForNavigation<MainContentView>(nameof(MainContentView));
+            containerRegistry.RegisterForNavigation<ThirdpartyLibraryView>(nameof(ThirdpartyLibraryView));
+            //containerRegistry.RegisterDialog<ConfirmationDialog, ConfirmationDialogViewModel>();
 
         }
         protected override void ConfigureViewModelLocator()
@@ -51,6 +54,7 @@ namespace AshellWPF
         {
             base.ConfigureModuleCatalog(moduleCatalog);
             moduleCatalog.AddModule<ControlSamplesModule>();
+            moduleCatalog.AddModule<HandyControlSampleModule>();
         }
         ////运行时加载Module的方式
         //protected override IModuleCatalog CreateModuleCatalog()

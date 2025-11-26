@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 
 namespace ControlSamples
 {
-    [Module(ModuleName = "ControlSamplesView")]
     public class ControlSamplesModule : IModule
     {
         public void OnInitialized(IContainerProvider containerProvider)

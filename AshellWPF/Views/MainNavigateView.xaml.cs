@@ -23,5 +23,24 @@ namespace AshellWPF.Views
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// 映射左键单击事件为右键单击事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void PhoneButton_Click(object sender, RoutedEventArgs e)
+        {
+            e.Handled = true;
+
+            var mouseDownEvent =
+                new MouseButtonEventArgs(Mouse.PrimaryDevice,
+                    Environment.TickCount,
+                    MouseButton.Right)
+                {
+                    RoutedEvent = Mouse.MouseUpEvent,
+                    Source = PhoneButton,
+                };
+            InputManager.Current.ProcessInput(mouseDownEvent);
+        }
     }
 }
