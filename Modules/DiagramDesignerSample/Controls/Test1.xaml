@@ -1,0 +1,58 @@
+﻿<UserControl
+    x:Class="DiagramDesignerSample.Controls.Test1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:DiagramDesigner.Controls;assembly=DiagramDesigner"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:dd="clr-namespace:DiagramDesigner;assembly=DiagramDesigner"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="300"
+    d:DesignWidth="300"
+    IsHitTestVisible="False"
+    mc:Ignorable="d">
+    <UserControl.Background>
+        <LinearGradientBrush>
+            <LinearGradientBrush.GradientStops>
+                <GradientStop Offset="0" Color="#FAFBE9" />
+                <GradientStop Offset="1" Color="CornflowerBlue" />
+            </LinearGradientBrush.GradientStops>
+        </LinearGradientBrush>
+    </UserControl.Background>
+    <Grid />
+    <dd:DesignerItem.ConnectorDecoratorTemplate>
+        <ControlTemplate>
+            <controls:RelativePositionPanel Margin="-4">
+                <dd:Connector
+                    x:Name="Bottom"
+                    controls:RelativePositionPanel.RelativePosition="0.5,0.9"
+                    IsSinkConnector="False"
+                    OnlyOneConnectionCanStart="True"
+                    Orientation="Bottom" />
+                <dd:Connector
+                    x:Name="Top"
+                    controls:RelativePositionPanel.RelativePosition="0.5,0.1"
+                    IsSourceConnector="False"
+                    OnlyOneConnectionCanEnd="True"
+                    Orientation="Top" />
+                <dd:Connector
+                    x:Name="Left"
+                    controls:RelativePositionPanel.RelativePosition="0.13,0.5"
+                    Orientation="Left" />
+                <dd:Connector
+                    x:Name="Right"
+                    controls:RelativePositionPanel.RelativePosition="0.87,0.5"
+                    Orientation="Right" />
+            </controls:RelativePositionPanel>
+        </ControlTemplate>
+    </dd:DesignerItem.ConnectorDecoratorTemplate>
+    <dd:DesignerItem.DragThumbTemplate>
+        <ControlTemplate>
+            <Path
+                Data="M 0,0 H 60 V40 H 0 Z"
+                Fill="Transparent"
+                IsHitTestVisible="True"
+                Stretch="Fill"
+                Stroke="Transparent" />
+        </ControlTemplate>
+    </dd:DesignerItem.DragThumbTemplate>
+</UserControl>

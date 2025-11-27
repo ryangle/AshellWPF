@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Images\**" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Prism.DryIoc" Version="9.0.537" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\AshellWPF.Core\AshellWPF.Core.csproj" />
+		<ProjectReference Include="..\DiagramDesigner\DiagramDesigner.csproj" />
+	</ItemGroup>
+
+</Project>

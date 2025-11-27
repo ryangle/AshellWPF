@@ -59,6 +59,7 @@ namespace AshellWPF
             base.ConfigureModuleCatalog(moduleCatalog);
             moduleCatalog.AddModule<ControlSamplesModule>();
             moduleCatalog.AddModule<HandyControlSampleModule>();
+            moduleCatalog.AddModule<DiagramDesignerSampleModule>();
         }
         ////运行时加载Module的方式
         //protected override IModuleCatalog CreateModuleCatalog()

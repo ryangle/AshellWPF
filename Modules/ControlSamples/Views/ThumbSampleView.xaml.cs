@@ -47,10 +47,8 @@ namespace ControlSamples.Views
                 {
                     //canvas.Width = xadjust;
                     //canvas.Height = yadjust;
-                    Canvas.SetLeft(button, Canvas.GetLeft(button) +
-                                            e.HorizontalChange);
-                    Canvas.SetTop(button, Canvas.GetTop(button) +
-                                            e.VerticalChange);
+                    Canvas.SetLeft(button, Canvas.GetLeft(button) + e.HorizontalChange);
+                    Canvas.SetTop(button, Canvas.GetTop(button) + e.VerticalChange);
                     //changes.Text = "Size: " +
                     //                myCanvasStretch.Width.ToString() +
                     //                 ", " +

@@ -4,6 +4,11 @@
 
 用于研究、测试和实践WPF的代码和功能。
 
+第三方项目有
+
+HandyControl
+DiagramDesigner
+
 
 
 

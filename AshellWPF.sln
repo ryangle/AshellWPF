@@ -5,7 +5,7 @@ VisualStudioVersion = 17.14.36511.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlSamples", "Modules\ControlsModule\ControlSamples.csproj", "{50F2808D-048E-45D1-ACBF-7CAE141DD0EF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlSamples", "Modules\ControlSamples\ControlSamples.csproj", "{50F2808D-048E-45D1-ACBF-7CAE141DD0EF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AshellWPF.Core", "AshellWPF.Core\AshellWPF.Core.csproj", "{72DA0C6C-BFE8-423D-A81D-15B89086E625}"
 EndProject
@@ -19,6 +19,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfControls", "Modules\WpfControls\WpfControls.csproj", "{7C216BB0-C028-7DA5-5F0C-F61AA0FADFCF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandyControlSample", "Modules\HandyControlSample\HandyControlSample.csproj", "{F698AF59-9C74-4D1C-8F70-F5F28362B9A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiagramDesigner", "Modules\DiagramDesigner\DiagramDesigner.csproj", "{7FCEA802-CD4B-9826-4CC9-637F8E7C12C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiagramDesignerSample", "Modules\DiagramDesignerSample\DiagramDesignerSample.csproj", "{1D61F19D-4DD2-4B7D-87FC-2DEC25A45E42}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,6 +50,14 @@ Global
 		{F698AF59-9C74-4D1C-8F70-F5F28362B9A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F698AF59-9C74-4D1C-8F70-F5F28362B9A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F698AF59-9C74-4D1C-8F70-F5F28362B9A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FCEA802-CD4B-9826-4CC9-637F8E7C12C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FCEA802-CD4B-9826-4CC9-637F8E7C12C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FCEA802-CD4B-9826-4CC9-637F8E7C12C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FCEA802-CD4B-9826-4CC9-637F8E7C12C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D61F19D-4DD2-4B7D-87FC-2DEC25A45E42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D61F19D-4DD2-4B7D-87FC-2DEC25A45E42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D61F19D-4DD2-4B7D-87FC-2DEC25A45E42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D61F19D-4DD2-4B7D-87FC-2DEC25A45E42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,6 +66,8 @@ Global
 		{50F2808D-048E-45D1-ACBF-7CAE141DD0EF} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{7C216BB0-C028-7DA5-5F0C-F61AA0FADFCF} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{F698AF59-9C74-4D1C-8F70-F5F28362B9A5} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{7FCEA802-CD4B-9826-4CC9-637F8E7C12C8} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{1D61F19D-4DD2-4B7D-87FC-2DEC25A45E42} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0E70CB51-69B3-4091-9722-71E0BF211F7F}

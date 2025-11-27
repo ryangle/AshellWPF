@@ -19,5 +19,12 @@
             Canvas.Top="100"
             BorderBrush="CadetBlue"
             BorderThickness="1" />
+        <Rectangle
+            x:Name="rectangle"
+            Canvas.Left="200"
+            Canvas.Top="200"
+            Width="100"
+            Height="100"
+            Fill="LightCoral" />
     </Canvas>
 </UserControl>
