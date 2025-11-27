@@ -28,4 +28,10 @@
     </Resource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Views\w2View.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
 </Project>

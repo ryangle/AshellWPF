@@ -162,7 +162,8 @@
                     Grid.Row="2"
                     Grid.Column="2"
                     VerticalAlignment="Center"
-                    BorderThickness="0" />
+                    BorderThickness="0"
+                    Password="12345" />
             </Grid>
             <Button
                 Grid.Row="2"

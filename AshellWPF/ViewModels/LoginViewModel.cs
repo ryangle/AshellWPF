@@ -10,7 +10,7 @@ namespace AshellWPF.ViewModels
         public DelegateCommand SettingCmd => new(Setting);
         public DelegateCommand<object> LoginCmd => new(Login);
 
-        private string _UserName = string.Empty;
+        private string _UserName = "Ryan";
 
         public string UserName
         {
@@ -41,6 +41,9 @@ namespace AshellWPF.ViewModels
             Debug.WriteLine($"login userName:{UserName}, password:{o?.Password}");
 
             var mainView = container.Resolve<MainView>();
+            var regionManager = container.Resolve<IRegionManager>();
+            RegionManager.SetRegionManager(mainView, regionManager);
+
             var loginView = App.Current.MainWindow;
             mainView.Show();
             App.Current.MainWindow = mainView;

@@ -18,6 +18,8 @@
         <WrapPanel Grid.Row="0">
             <Button Command="{Binding ShowViewCmd}" CommandParameter="ButtonView">Button</Button>
             <Button Command="{Binding ShowViewCmd}" CommandParameter="MenuView">Menu</Button>
+            <Button Command="{Binding ShowViewCmd}" CommandParameter="AnimationPathView">AnimationPath</Button>
+            <Button Command="{Binding ShowViewCmd}" CommandParameter="AutoCompleteTextBoxView">AutoCompleteTextBox</Button>
         </WrapPanel>
         <ContentControl Grid.Row="1" prism:RegionManager.RegionName="HandyControlSample.MainContent" />
     </Grid>

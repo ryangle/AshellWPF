@@ -20,6 +20,8 @@ namespace ControlSamples
             containerRegistry.RegisterForNavigation<HandyControlSampleView>(nameof(HandyControlSampleView));
             containerRegistry.RegisterForNavigation<ButtonView>(nameof(ButtonView));
             containerRegistry.RegisterForNavigation<MenuView>(nameof(MenuView));
+            containerRegistry.RegisterForNavigation<AnimationPathView>(nameof(AnimationPathView));
+            containerRegistry.RegisterForNavigation<AutoCompleteTextBoxView>(nameof(AutoCompleteTextBoxView));
         }
     }
 }

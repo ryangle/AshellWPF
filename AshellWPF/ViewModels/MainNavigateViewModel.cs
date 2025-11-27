@@ -32,6 +32,7 @@ namespace AshellWPF.ViewModels
             {
                 return;
             }
+            var rs = regionManager.Regions;
             regionManager.RequestNavigate(RegionsConstants.SubNavigateRegion, view);
         }
         private void AppInitialized()

@@ -17,13 +17,15 @@ namespace AshellWPF
     {
         protected override Window CreateShell()
         {
-            return Container.Resolve<MainView>();
+            return Container.Resolve<LoginView>();
+            //return Container.Resolve<HostView>();
         }
         protected override void OnInitialized()
         {
             base.OnInitialized();
 
             var regionManager = Container.Resolve<IRegionManager>();
+            regionManager.RegisterViewWithRegion("HostRegion", nameof(w1View));
             regionManager.RegisterViewWithRegion(RegionsConstants.MainNavigateRegion, typeof(MainNavigateView));
             regionManager.RegisterViewWithRegion(RegionsConstants.SubNavigateRegion, "ControlSamplesView");
             regionManager.RequestNavigate(RegionsConstants.MainContentRegion, nameof(MainContentView));
@@ -42,6 +44,8 @@ namespace AshellWPF
             //containerRegistry.RegisterForNavigation<FollowMouseView>("FollowMouseView");
             containerRegistry.RegisterForNavigation<MainContentView>(nameof(MainContentView));
             containerRegistry.RegisterForNavigation<ThirdpartyLibraryView>(nameof(ThirdpartyLibraryView));
+            containerRegistry.RegisterForNavigation<w1View>(nameof(w1View));
+            containerRegistry.RegisterForNavigation<w2View>(nameof(w2View));
             //containerRegistry.RegisterDialog<ConfirmationDialog, ConfirmationDialogViewModel>();
 
         }

@@ -16,6 +16,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\AutoCompleteTextBoxView.xaml.cs">
+	    <SubType>Code</SubType>
+	  </Compile>
+	  <Compile Update="Views\AnimationPathView.xaml.cs">
+	    <SubType>Code</SubType>
+	  </Compile>
 	  <Compile Update="Views\MenuView.xaml.cs">
 	    <SubType>Code</SubType>
 	  </Compile>
